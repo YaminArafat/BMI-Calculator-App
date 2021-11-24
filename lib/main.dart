@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:your_bmi/screens/bmi_main.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,11 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      theme: ThemeData.dark().copyWith(
+        primaryColor: Color(0xFF1E1531),
+        scaffoldBackgroundColor: Color(0xFF1E1531),
       ),
-      home: null,
+      home: BMIcalc(),
     );
   }
 }
